@@ -22,7 +22,9 @@ const navData = [
 
 export default function Header() {
     return (
-        <header className="px-4 py-8 w-full bg-light-color flex flex-row justify-between items-center overflow-x-hidden">
+        <header
+            className="px-4 py-8 w-full bg-light-color flex flex-row justify-between items-center 
+            overflow-hidden">
             <Logo text="Next Template" />
             <NavBar navData={navData} />
         </header>
