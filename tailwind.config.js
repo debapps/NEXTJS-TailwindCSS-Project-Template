@@ -40,12 +40,17 @@ module.exports = {
 
             animation: {
                 "text-in": "text-in 1s cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+                "zoom-in": "zoom-in 1s ease-in-out",
             },
 
             keyframes: {
                 "text-in": {
                     from: { transform: "translateY(50px)", opacity: "0.01" },
                     to: { transform: "translateY(0)", opacity: "1" },
+                },
+                "zoom-in": {
+                    from: { transform: "scale(0.5)", opacity: "0.01" },
+                    to: { transform: "scale(1)", opacity: "1" },
                 },
             },
         },

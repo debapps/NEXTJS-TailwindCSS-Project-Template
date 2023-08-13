@@ -1,13 +1,13 @@
 // Option 1
 export default function AnimateHeading({ text }) {
     return (
-        <div>
+        <div className="mb-8">
             {text.split(" ").map((word, idx) => {
                 return (
                     <span
                         key={idx}
                         className="inline-block mr-4 animate-text-in text-pallete-color2
-                        text-7xl xl:text-6xl lg:text-4xl font-bold font-ubuntu leading-relaxed"
+                        text-6xl md:text-4xl sm:text-2xl font-bold font-ubuntu"
                         style={{
                             animationDelay: `${idx * 100}ms`,
                             animationFillMode: "backwards",
@@ -25,7 +25,7 @@ export default function AnimateHeading({ text }) {
 
 // export default function AnimateHeading({ text }) {
 //     return (
-//         <div>
+//         <div className="mb-8">
 //             {text.split(" ").map((word, idx) => {
 //                 return (
 //                     <span
