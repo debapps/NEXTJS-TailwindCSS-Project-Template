@@ -5,7 +5,7 @@ import HeroImg1 from "../../public/images/web-dev-hero.jpg";
 export default function Home() {
     return (
         <main
-            className="w-full min-h-screen bg-light-color px-20 sm:px-10 py-10 sm:py-5 
+            className="w-full min-h-screen bg-light-color dark:bg-dark-color px-20 sm:px-10 py-10 sm:py-5 
             flex flex-col items-start justify-center">
             <section className="w-full flex flex-row sm:flex-col justify-between items-center space-x-8 sm:space-y-8">
                 <Image
@@ -18,7 +18,7 @@ export default function Home() {
                     <p className="text-lg md:text-base sm:text-sm font-sans text-pallete-color1 animate-text-in mb-4">
                         This is project strater template for NEXT JS and
                         Tailwind CSS. The tempalte is{" "}
-                        <strong className="text-pallete-color4">
+                        <strong className="text-pallete-color4 dark:text-pallete-color5">
                             fully responsive
                         </strong>{" "}
                         i.e., It has Mobile, Tablet, Laptop and Desktop friendly

@@ -7,7 +7,8 @@ export default function Logo({ text }) {
     return (
         <Link className="flex flex-row sm:flex-col items-center" href="/">
             <Image
-                className="w-16 h-16 rounded-full"
+                className="w-16 h-16 rounded-full border-solid border-[1px] border-transparent 
+                dark:border-light-color"
                 src={LogoImg}
                 alt="logo-image"
             />
