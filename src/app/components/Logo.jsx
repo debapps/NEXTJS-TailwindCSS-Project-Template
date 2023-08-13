@@ -13,7 +13,7 @@ export default function Logo({ text }) {
             />
             {text && (
                 <GradientText
-                    style="text-3xl md:text-2xl sm:text-xl ml-2 sm:ml-0 sm:mt-2 
+                    sx="text-3xl md:text-2xl sm:text-xl ml-2 sm:ml-0 sm:mt-2 
                     font-bold font-ubuntu p-1">
                     {text}
                 </GradientText>

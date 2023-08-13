@@ -1,26 +1,46 @@
-"use client";
-import GradientText from "./GradientText";
-import { motion } from "framer-motion";
-
-export default function AnimatedHeading({ text }) {
+// Option 1
+export default function AnimateHeading({ text }) {
     return (
-        <GradientText style="text-6xl md:text-4xl sm:text-2xl leading-normal font-karla font-bold">
+        <div>
             {text.split(" ").map((word, idx) => {
                 return (
-                    <motion.span
+                    <span
                         key={idx}
-                        className="inline-block mr-4"
-                        initial={{ y: 50, opacity: 0.02 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{
-                            duration: 1,
-                            ease: "easeInOut",
-                            delay: 0.1 * idx,
+                        className="inline-block mr-4 animate-text-in text-pallete-color2
+                        text-7xl xl:text-6xl lg:text-4xl font-bold font-ubuntu leading-relaxed"
+                        style={{
+                            animationDelay: `${idx * 100}ms`,
+                            animationFillMode: "backwards",
                         }}>
-                        {`${word} `}
-                    </motion.span>
+                        {word}
+                    </span>
                 );
             })}
-        </GradientText>
+        </div>
     );
 }
+
+// Option 2:
+// import GradientText from "./GradientText";
+
+// export default function AnimateHeading({ text }) {
+//     return (
+//         <div>
+//             {text.split(" ").map((word, idx) => {
+//                 return (
+//                     <span
+//                         key={idx}
+//                         className="inline-block mr-4 animate-text-in"
+//                         style={{
+//                             animationDelay: `${idx * 100}ms`,
+//                             animationFillMode: "backwards",
+//                         }}>
+//                         <GradientText sx="text-7xl xl:text-6xl lg:text-4xl font-bold font-ubuntu">
+//                             {word}
+//                         </GradientText>
+//                     </span>
+//                 );
+//             })}
+//         </div>
+//     );
+// }

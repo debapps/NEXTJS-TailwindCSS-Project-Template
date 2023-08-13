@@ -37,6 +37,17 @@ module.exports = {
                 lg: { min: "1025px" },
                 // => @media (min-width: 1025px) { ... }
             },
+
+            animation: {
+                "text-in": "text-in 1s cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+            },
+
+            keyframes: {
+                "text-in": {
+                    from: { transform: "translateY(50px)", opacity: "0.01" },
+                    to: { transform: "translateY(0)", opacity: "1" },
+                },
+            },
         },
     },
     plugins: [],
