@@ -6,7 +6,7 @@ export default function AnimateHeading({ text }) {
                 return (
                     <span
                         key={idx}
-                        className="inline-block mr-4 animate-text-in 
+                        className="inline-block mr-4 sm:mr-2 animate-text-in 
                         text-pallete-color2 dark:text-pallete-color5
                         text-6xl md:text-4xl sm:text-2xl font-bold font-ubuntu"
                         style={{

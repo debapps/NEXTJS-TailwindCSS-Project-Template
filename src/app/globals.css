@@ -18,7 +18,7 @@
     }
 
     p {
-        @apply text-lg md:text-base sm:text-sm font-sans mb-4;
+        @apply text-lg md:text-base sm:text-sm font-sans mb-4 text-dark-color dark:text-light-color;
     }
 
     p > img {
@@ -47,5 +47,11 @@
 
     li {
         @apply my-2 md:my-1 text-dark-color dark:text-light-color text-lg md:text-base sm:text-sm;
+    }
+}
+
+@layer components {
+    .blob {
+        border-radius: 70% 40% 50% 30% / 40% 60% 60% 40%;
     }
 }

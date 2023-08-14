@@ -42,6 +42,7 @@ module.exports = {
             animation: {
                 "text-in": "text-in 1s cubic-bezier(0.68, -0.55, 0.265, 1.55)",
                 "zoom-in": "zoom-in 1s ease-in-out",
+                "rotate-in": "rotate-in 1s ease-in-out",
             },
 
             keyframes: {
@@ -52,6 +53,13 @@ module.exports = {
                 "zoom-in": {
                     from: { transform: "scale(0.5)", opacity: "0.01" },
                     to: { transform: "scale(1)", opacity: "1" },
+                },
+                "rotate-in": {
+                    from: {
+                        transform: "rotate(-600deg) scale(0.5)",
+                        opacity: "0.01",
+                    },
+                    to: { transform: "rotate(0deg) scale(1)", opacity: "1" },
                 },
             },
         },

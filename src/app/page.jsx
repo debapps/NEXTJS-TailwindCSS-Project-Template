@@ -5,17 +5,22 @@ import HeroImg1 from "../../public/images/web-dev-hero.jpg";
 export default function Home() {
     return (
         <main
-            className="w-full min-h-screen bg-light-color dark:bg-dark-color px-20 sm:px-10 py-10 sm:py-5 
-            flex flex-col items-start justify-center">
-            <section className="w-full flex flex-row sm:flex-col justify-start items-start space-x-8 sm:space-y-8">
+            className="w-full min-h-screen bg-light-color dark:bg-dark-color 
+            px-20 sm:px-10 py-10 sm:py-5 flex flex-col items-start justify-center">
+            <section
+                className="w-full flex flex-row sm:flex-col justify-between items-start 
+                space-x-8 sm:space-x-0 sm:space-y-8">
                 <Image
-                    className="block w-[40%] md:w-1/2 sm:w-full rounded-3xl shadow-lg shadow-gray-400 animate-zoom-in"
+                    className="block w-[40%] md:w-1/2 sm:w-full rounded-3xl 
+                    shadow-2xl shadow-pallete-color3 dark:shadow-pallete-color5 animate-rotate-in sm:mt-52 sm:mb-5"
                     src={HeroImg1}
                     alt="hero-image-1"
+                    priority
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
                 />
-                <article className="flex flex-col items-start justify-start w-[60%] md:w-1/2 sm:w-full">
+                <article className="flex flex-col items-start justify-center w-[60%] md:w-1/2 sm:w-full">
                     <AnimatedHeading text="Welcome to the NEXT JS and Tailwind CSS template!" />
-                    <p className="text-pallete-color1 animate-text-in">
+                    <p className="!text-pallete-color1 animate-text-in">
                         This is project strater template for NEXT JS and
                         Tailwind CSS. The tempalte is{" "}
                         <strong className="text-pallete-color4 dark:text-pallete-color5">
@@ -25,7 +30,7 @@ export default function Home() {
                         layouts and designs. It has responsive Navigation Menu,
                         Headers, Logo and Footer areas.
                     </p>
-                    <p className="text-pallete-color1 animate-text-in">
+                    <p className="!text-pallete-color1 animate-text-in">
                         Fill free to use the template in your next front end
                         project.
                     </p>
