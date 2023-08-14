@@ -6,15 +6,18 @@
 
 @layer base {
     h1 {
-        @apply text-pallete-color2 dark:text-pallete-color5 md:text-3xl text-5xl font-karla font-extrabold py-10 leading-10 tracking-widest;
+        @apply text-pallete-color2 dark:text-pallete-color5 text-6xl md:text-3xl sm:text-2xl 
+        font-karla font-extrabold py-10 leading-10 tracking-widest;
     }
 
     h2 {
-        @apply text-pallete-color2 dark:text-pallete-color5 md:text-xl text-3xl font-karla font-bold py-10 leading-10 tracking-wider;
+        @apply text-pallete-color2 dark:text-pallete-color5 text-3xl md:text-2xl sm:text-xl 
+        font-karla font-bold py-10 leading-10 tracking-wider;
     }
 
     h3 {
-        @apply text-pallete-color2 dark:text-pallete-color5 md:text-lg text-xl font-karla font-bold py-10 leading-10 tracking-wide;
+        @apply text-pallete-color2 dark:text-pallete-color5 text-2xl md:text-xl sm:text-lg 
+        font-karla font-bold py-10 leading-10 tracking-wide;
     }
 
     p {

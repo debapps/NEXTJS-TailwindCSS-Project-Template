@@ -29,14 +29,11 @@ module.exports = {
                 "linkedin-color": "#0E76A8",
             },
             screens: {
-                sm: { min: "280px", max: "530px" },
-                // => @media (min-width: 280px and max-width: 530px) { ... }
+                sm: { min: "280px", max: "510px" },
 
-                md: { min: "540px", max: "1024px" },
-                // => @media (min-width: 540px and max-width: 1024px) { ... }
+                md: { min: "511px", max: "1020px" },
 
-                lg: { min: "1025px" },
-                // => @media (min-width: 1025px) { ... }
+                lg: { min: "1021px" },
             },
 
             animation: {
