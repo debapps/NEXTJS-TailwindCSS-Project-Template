@@ -3,3 +3,49 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply text-pallete-color2 dark:text-pallete-color5 md:text-3xl text-5xl font-karla font-extrabold py-10 leading-10 tracking-widest;
+    }
+
+    h2 {
+        @apply text-pallete-color2 dark:text-pallete-color5 md:text-xl text-3xl font-karla font-bold py-10 leading-10 tracking-wider;
+    }
+
+    h3 {
+        @apply text-pallete-color2 dark:text-pallete-color5 md:text-lg text-xl font-karla font-bold py-10 leading-10 tracking-wide;
+    }
+
+    p {
+        @apply text-lg md:text-base sm:text-sm font-sans mb-4;
+    }
+
+    p > img {
+        @apply w-2/3 rounded-lg block pt-10 pb-7 mx-auto;
+    }
+
+    p > img + em {
+        @apply text-base italic block w-full text-center pb-10;
+    }
+
+    blockquote {
+        @apply block p-5 mx-10 my-5 bg-pallete-color5 border-l-8 border-l-pallete-color4 md:text-base text-lg;
+    }
+
+    em {
+        @apply italic;
+    }
+
+    ul {
+        @apply list-disc py-1 md:py-0 pl-10 md:pl-4 m-2 md:m-1;
+    }
+
+    ol {
+        @apply list-decimal py-1 md:py-0 pl-10 md:pl-4 m-2 md:m-1;
+    }
+
+    li {
+        @apply my-2 md:my-1 text-dark-color dark:text-light-color text-lg md:text-base sm:text-sm;
+    }
+}

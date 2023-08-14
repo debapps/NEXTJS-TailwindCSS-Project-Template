@@ -24,8 +24,9 @@ const navData = [
 export default function Header() {
     return (
         <header
-            className="px-4 py-8 w-full bg-light-color dark:bg-dark-color 
-            flex flex-row justify-between items-center overflow-hidden">
+            className="px-4 py-8 w-full bg-light-color/90 backdrop-blur-sm dark:bg-dark-color/90 
+            flex flex-row justify-between items-center overflow-hidden fixed 
+            shadow-lg shadow-pallete-color4 dark:shadow-pallete-color5">
             <div className="order-1 md:order-2 sm:order-2">
                 <Logo text="Next Template" />
             </div>
