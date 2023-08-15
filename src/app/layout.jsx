@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 export const metadata = {
-    title: "NEXT JS + Tailwind CSS",
+    title: "Home | NEXT JS + Tailwind CSS",
     description:
         "This is starter template of NEXT JS and Tailwind CSS project.",
 };

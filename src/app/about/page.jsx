@@ -2,6 +2,12 @@ import Image from "next/image";
 import AnimateHeading from "../components/AnimatedHeading";
 import profilePic from "../../../public/images/my-image.png";
 
+export const metadata = {
+    title: "About | NEXT JS + Tailwind CSS",
+    description:
+        "This is starter template of NEXT JS and Tailwind CSS project.",
+};
+
 export default function About() {
     return (
         <main

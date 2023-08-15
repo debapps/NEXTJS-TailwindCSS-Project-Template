@@ -4,6 +4,12 @@ import contactImg from "../../../public/images/contact-image.jpg";
 import Link from "next/link";
 import SocialIcons from "../components/SocialIcons";
 
+export const metadata = {
+    title: "Contact | NEXT JS + Tailwind CSS",
+    description:
+        "This is starter template of NEXT JS and Tailwind CSS project.",
+};
+
 export default function Contact() {
     return (
         <main
@@ -26,10 +32,10 @@ export default function Contact() {
                     className="flex flex-col justify-center items-start 
                     w-[60%] md:w-full sm:w-full">
                     <p className="animate-text-in">
-                        I like to hear your feedbacks and suggestions. You can
-                        also pitch your blog idea to me and I will publish your
-                        article with your name and contacts in my blog after
-                        review.
+                        I like to hear your feedbacks and suggestions regarding
+                        this project starter template. If you want to contact
+                        me, hire me, please feel free to contact me for any
+                        consultation in any of the below channels.
                     </p>
                     <p className="animate-text-in">
                         Please write to me @{" "}

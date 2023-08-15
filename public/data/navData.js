@@ -12,7 +12,7 @@ export const navData = [
         href: "/contact",
     },
     {
-        title: "Articles",
-        href: "/articles",
+        title: "Stories",
+        href: "/stories",
     },
 ];
