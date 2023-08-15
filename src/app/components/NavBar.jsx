@@ -65,8 +65,8 @@ export default function NavBar({ navData }) {
                 className={`${
                     isOpen ? "block" : "hidden"
                 } flex flex-col justify-between items-center space-y-4 p-5 z-30 w-[50vw] h-auto
-                fixed top-72 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-light-color/95 
-                dark:bg-dark-color/95 rounded-lg`}>
+                fixed top-72 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-pallete-color5/95 
+                dark:bg-pallete-color3/95 rounded-lg`}>
                 {getNavLinks(true)}
             </nav>
 

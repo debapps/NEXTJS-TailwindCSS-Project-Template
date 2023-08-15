@@ -40,6 +40,8 @@ module.exports = {
                 "text-in": "text-in 1s cubic-bezier(0.68, -0.55, 0.265, 1.55)",
                 "zoom-in": "zoom-in 1s ease-in-out",
                 "rotate-in": "rotate-in 1s ease-in-out",
+                "slide-left-in": "slide-left-in 1s ease-in-out",
+                "slide-right-in": "slide-right-in 1s ease-in-out",
             },
 
             keyframes: {
@@ -57,6 +59,14 @@ module.exports = {
                         opacity: "0.01",
                     },
                     to: { transform: "rotate(0deg) scale(1)", opacity: "1" },
+                },
+                "slide-left-in": {
+                    from: { transform: "translateX(500px)", opacity: "0.01" },
+                    to: { transform: "translateX(0)", opacity: "1" },
+                },
+                "slide-right-in": {
+                    from: { transform: "translateX(-500px)", opacity: "0.01" },
+                    to: { transform: "translateX(0)", opacity: "1" },
                 },
             },
         },

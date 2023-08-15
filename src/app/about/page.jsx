@@ -25,7 +25,7 @@ export default function About() {
                 </div>
                 <article
                     className="flex flex-col justify-center items-start 
-                    w-[60%] md:w-full sm:w-full sm:space-y-8">
+                    w-[60%] md:w-full sm:w-full">
                     <AnimateHeading text="Transforming ideas into reality through Design and Code." />
                     <p className="animate-text-in">
                         Hello, I am <strong>Debaditya Bhar</strong>. I am a

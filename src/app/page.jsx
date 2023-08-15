@@ -12,11 +12,12 @@ export default function Home() {
                 space-x-8 md:space-x-0 sm:space-x-0 md:space-y-16 sm:space-y-8">
                 <Image
                     className="block w-[40%] md:w-full sm:w-full rounded-3xl 
-                    shadow-2xl shadow-pallete-color3 dark:shadow-pallete-color5 animate-rotate-in sm:mt-52 sm:mb-5"
+                    shadow-2xl shadow-pallete-color3 dark:shadow-pallete-color5 
+                    animate-rotate-in sm:mt-52 sm:mb-5"
                     src={HeroImg1}
                     alt="hero-image-1"
                     priority
-                    // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
                 />
                 <article className="flex flex-col items-start justify-center w-[60%] md:w-full sm:w-full">
                     <AnimatedHeading text="Welcome to the NEXT JS and Tailwind CSS template!" />

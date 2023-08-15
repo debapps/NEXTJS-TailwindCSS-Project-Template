@@ -1,11 +1,51 @@
+import Image from "next/image";
+import AnimateHeading from "../components/AnimatedHeading";
+import contactImg from "../../../public/images/contact-image.jpg";
+import Link from "next/link";
+import SocialIcons from "../components/SocialIcons";
+
 export default function Contact() {
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-light-color">
-            <h1
-                className="text-7xl md:text-4xl sm:text-2xl font-sans 
-              bg-pallete-color3 text-pallete-color1 p-5 md:p-2 sm:p-1 rounded-md">
-                Contact Page
-            </h1>
+        <main
+            className="w-full min-h-screen bg-light-color dark:bg-dark-color 
+            px-20 sm:px-10 py-40 sm:py-52 flex flex-col items-start justify-center">
+            <AnimateHeading text="Feel free to reach me out ..." />
+            <section
+                className="flex flex-row md:flex-col sm:flex-col justify-between items-center 
+                space-x-8 md:space-x-0 sm:space-x-0 md:space-y-16 sm:space-y-8">
+                <Image
+                    src={contactImg}
+                    alt="contact-image"
+                    className="block w-[40%] md:w-full sm:w-full h-auto rounded-xl shadow-2xl
+                    shadow-pallete-color3 dark:shadow-pallete-color5 animate-slide-right-in sm:mb-5"
+                    priority
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+                />
+
+                <article
+                    className="flex flex-col justify-center items-start 
+                    w-[60%] md:w-full sm:w-full">
+                    <p className="animate-text-in">
+                        I like to hear your feedbacks and suggestions. You can
+                        also pitch your blog idea to me and I will publish your
+                        article with your name and contacts in my blog after
+                        review.
+                    </p>
+                    <p className="animate-text-in">
+                        Please write to me @{" "}
+                        <Link
+                            href={`mailto:bhar.debaditya@gmail.com`}
+                            className="font-ubuntu font-bold cursor-pointer italic 
+                            hover:text-pallete-color1 hover:underline">
+                            bhar.debaditya@gmail.com
+                        </Link>
+                    </p>
+                    <p className="animate-text-in">Find me on social media:</p>
+                    <div className="animate-slide-left-in">
+                        <SocialIcons />
+                    </div>
+                </article>
+            </section>
         </main>
     );
 }
