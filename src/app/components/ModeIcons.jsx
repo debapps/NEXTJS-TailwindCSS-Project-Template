@@ -12,7 +12,7 @@ export default function ModeIcons() {
                     onClick={() => {
                         setTheme("dark");
                     }}>
-                    <span class="material-symbols-outlined cursor-pointer font-bold text-dark-color">
+                    <span className="material-symbols-outlined cursor-pointer font-bold text-dark-color">
                         dark_mode
                     </span>
                 </button>
@@ -21,7 +21,7 @@ export default function ModeIcons() {
                     onClick={() => {
                         setTheme("light");
                     }}>
-                    <span class="material-symbols-outlined cursor-pointer font-bold text-light-color">
+                    <span className="material-symbols-outlined cursor-pointer font-bold text-light-color">
                         light_mode
                     </span>
                 </button>
