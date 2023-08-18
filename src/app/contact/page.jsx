@@ -14,7 +14,7 @@ export default function Contact() {
     return (
         <main
             className="w-full min-h-screen bg-light-color dark:bg-dark-color 
-            px-20 sm:px-10 py-40 sm:py-52 flex flex-col items-start justify-center">
+            px-20 sm:px-10 py-40 sm:py-52 flex flex-col items-start justify-center overflow-x-hidden">
             <AnimateHeading text="Feel free to reach me out ..." />
             <section
                 className="flex flex-row md:flex-col sm:flex-col justify-between items-center 

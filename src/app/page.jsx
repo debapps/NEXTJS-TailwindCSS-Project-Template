@@ -6,7 +6,7 @@ export default function Home() {
     return (
         <main
             className="w-full min-h-screen bg-light-color dark:bg-dark-color 
-            px-20 sm:px-10 py-40 sm:py-5 flex flex-col items-start justify-center">
+            px-20 sm:px-10 py-40 sm:py-5 flex flex-col items-start justify-center overflow-x-hidden">
             <section
                 className="w-full flex flex-row md:flex-col sm:flex-col justify-between items-center 
                 space-x-8 md:space-x-0 sm:space-x-0 md:space-y-16 sm:space-y-8">

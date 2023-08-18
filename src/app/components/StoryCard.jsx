@@ -3,6 +3,7 @@ import { getDateFormatted } from "@/utilities/formatDate";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import GradientText from "./GradientText";
 
 export default function StoryCard({
     title,
@@ -28,11 +29,12 @@ export default function StoryCard({
                 alt={title}
                 width={500}
                 height={300}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
             />
             {/* Blog title */}
-            <h2 className="text-3xl sm:text-xl font-ubuntu pt-5 pb-2">
+            <GradientText sx="text-3xl sm:text-xl font-sacramento text-bold pt-5 pb-2 pl-1">
                 {title}
-            </h2>
+            </GradientText>
             {/* Blog Category */}
             <h3
                 className="font-sans text-xs tracking-widest mt-2 mb-5 
@@ -53,7 +55,7 @@ export default function StoryCard({
                 className="sm:text-base text-lg font-ubuntu p-2 my-3 bg-pallete-color4
                 hover:bg-pallete-color1 text-pallete-color5 border rounded-lg shadow-lg 
                 shadow-pallete-color2"
-                href={`/story/${slug}`}>
+                href={`/stories/${slug}`}>
                 Read More ..
             </Link>
         </motion.section>

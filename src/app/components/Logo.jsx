@@ -11,6 +11,7 @@ export default function Logo({ text }) {
                 dark:border-light-color"
                 src={LogoImg}
                 alt="logo-image"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
             />
             {text && (
                 <GradientText

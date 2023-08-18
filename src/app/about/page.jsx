@@ -12,7 +12,7 @@ export default function About() {
     return (
         <main
             className="w-full min-h-screen bg-light-color dark:bg-dark-color 
-            px-20 sm:px-10 py-40 sm:py-20 flex flex-col items-start justify-center">
+            px-20 sm:px-10 py-40 sm:py-20 flex flex-col items-start justify-center overflow-x-hidden">
             <section
                 className="flex flex-row md:flex-col sm:flex-col justify-between items-center 
                 space-x-8 md:space-x-0 sm:space-x-0 md:space-y-16 sm:space-y-8">
@@ -26,7 +26,7 @@ export default function About() {
                         alt="my-image"
                         className="object-cover"
                         priority
-                        // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
                     />
                 </div>
                 <article
