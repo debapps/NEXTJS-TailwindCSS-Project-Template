@@ -1,7 +1,7 @@
-export default function StoryForm({ closeFunc }) {
+export default function StoryForm({ closeFunc, handleSave }) {
     return (
         <form
-            // onSubmit={handleSave}
+            onSubmit={handleSave}
             className="flex flex-col justify-center items-center space-y-2 w-full">
             <div className="w-full pb-4 text-center">
                 <h2 className="font-ubuntu">Add New Story</h2>

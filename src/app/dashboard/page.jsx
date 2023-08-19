@@ -6,12 +6,18 @@ import { useRouter } from "next/navigation";
 import useSWR from "swr";
 import ProgressLoading from "../components/ProgressLoading";
 import StoryItem from "../components/StoryItem";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import StoryForm from "../components/StoryForm";
+import { apiDELETE, apiPOST } from "@/utilities/callAPI";
+import getHTML from "@/utilities/htmlConvert";
+import { AlertContext } from "../context/alert/AlertProvider";
 
 const apiHost = process.env.NEXT_PUBLIC_API_HOST;
 
 export default function DashBoard() {
+    // Get the alert context.
+    const { showAlert } = useContext(AlertContext);
+
     // Get the Next Auth session.
     const session = useSession();
 
@@ -30,6 +36,68 @@ export default function DashBoard() {
 
     // Add story pannel open/close state hook.
     const [open, setOpen] = useState(false);
+
+    // This function is triggered when the form is submitted.
+    // It stores the story into DB through API.
+    async function handleSave(event) {
+        // Prevents default behavior of the form.
+        event.preventDefault();
+
+        // Get the form input values and form the story object.
+        let title = event.target[0].value;
+        let category = event.target[1].value;
+        let synopsis = event.target[2].value;
+        let image = event.target[3].value;
+        let author = session.data?.user.name;
+
+        // Convert the content into HTML text.
+        let content = getHTML(event.target[4].value);
+
+        const story = {
+            title,
+            category,
+            synopsis,
+            image,
+            content,
+            author,
+        };
+
+        const { status, message } = await apiPOST("/api/story", story);
+
+        if (status === 200) {
+            // Reset the form values.
+            event.target.reset();
+
+            // Close the add pannel.
+            setOpen(false);
+
+            // Refetch the API.
+            mutate();
+
+            // Show the alert.
+            showAlert("success", message);
+        } else {
+            showAlert("error", message);
+        }
+    }
+
+    // This function delete the story.
+    async function deleteStory(slug) {
+        // API end point and URL.
+        const endPoint = `/api/story/${slug}`;
+
+        const { status, message } = await apiDELETE(endPoint);
+
+        if (status === 200) {
+            // Refetch the API.
+            mutate();
+
+            // Show the alert.
+            showAlert("success", message);
+        } else {
+            showAlert("error", message);
+        }
+    }
 
     if (session.status === "unauthenticated") {
         router.push("/login");
@@ -69,7 +137,7 @@ export default function DashBoard() {
                     bg-light-color border-dark-color dark:border-light-color rounded-lg
                     animate-slide-left-in min-h-fit shadow-2xl 
                     shadow-pallete-color3 dark:shadow-pallete-color5`}>
-                    <StoryForm closeFunc={setOpen} />
+                    <StoryForm closeFunc={setOpen} handleSave={handleSave} />
                 </div>
 
                 {/* Get the stories for the author. */}
@@ -81,7 +149,7 @@ export default function DashBoard() {
                             <StoryItem
                                 key={idx}
                                 story={story}
-                                // deleteStory={deleteStory}
+                                deleteStory={deleteStory}
                             />
                         );
                     })

@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import AuthProvider from "./components/AuthProvider";
+import AlertProvider from "./context/alert/AlertProvider";
 
 export default function RootLayout({ children }) {
     return (
@@ -28,11 +29,13 @@ export default function RootLayout({ children }) {
                 <link rel="manifest" href="/favicon/site.webmanifest" />
             </Head>
             <body>
-                <AuthProvider>
-                    <Header />
-                    {children}
-                    <Footer />
-                </AuthProvider>
+                <AlertProvider>
+                    <AuthProvider>
+                        <Header />
+                        {children}
+                        <Footer />
+                    </AuthProvider>
+                </AlertProvider>
             </body>
         </html>
     );
