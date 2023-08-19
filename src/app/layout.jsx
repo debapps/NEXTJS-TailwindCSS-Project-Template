@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import AuthProvider from "./components/AuthProvider";
 import AlertProvider from "./context/alert/AlertProvider";
+import AlertPopup from "./components/AlertPopup";
 
 export default function RootLayout({ children }) {
     return (
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
                 <AlertProvider>
                     <AuthProvider>
                         <Header />
+                        <AlertPopup />
                         {children}
                         <Footer />
                     </AuthProvider>
