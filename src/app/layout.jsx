@@ -2,6 +2,7 @@ import Head from "next/head";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import AuthProvider from "./components/AuthProvider";
 
 export const metadata = {
     title: "Home | NEXT JS + Tailwind CSS",
@@ -33,9 +34,11 @@ export default function RootLayout({ children }) {
                 <link rel="manifest" href="/favicon/site.webmanifest" />
             </Head>
             <body>
-                <Header />
-                {children}
-                <Footer />
+                <AuthProvider>
+                    <Header />
+                    {children}
+                    <Footer />
+                </AuthProvider>
             </body>
         </html>
     );
