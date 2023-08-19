@@ -4,12 +4,6 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import AuthProvider from "./components/AuthProvider";
 
-export const metadata = {
-    title: "Home | NEXT JS + Tailwind CSS",
-    description:
-        "This is starter template of NEXT JS and Tailwind CSS project.",
-};
-
 export default function RootLayout({ children }) {
     return (
         <html lang="en">

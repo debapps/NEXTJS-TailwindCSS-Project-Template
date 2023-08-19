@@ -42,6 +42,7 @@ module.exports = {
                 "rotate-in": "rotate-in 1s ease-in-out",
                 "slide-left-in": "slide-left-in 1s ease-in-out",
                 "slide-right-in": "slide-right-in 1s ease-in-out",
+                "bounce-loading": "bounce-loading 1.5s 0s ease-in-out infinite",
             },
 
             keyframes: {
@@ -67,6 +68,11 @@ module.exports = {
                 "slide-right-in": {
                     from: { transform: "translateX(-500px)", opacity: "0.01" },
                     to: { transform: "translateX(0)", opacity: "1" },
+                },
+                "bounce-loading": {
+                    "0%": { height: "16px" },
+                    "50%": { height: "40px" },
+                    "100%": { height: "16px" },
                 },
             },
         },
