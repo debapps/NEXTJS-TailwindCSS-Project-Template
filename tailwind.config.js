@@ -29,9 +29,9 @@ module.exports = {
                 "linkedin-color": "#0E76A8",
             },
             screens: {
-                sm: { min: "280px", max: "510px" },
+                sm: { min: "280px", max: "540px" },
 
-                md: { min: "511px", max: "1020px" },
+                md: { min: "541px", max: "1020px" },
 
                 lg: { min: "1021px" },
             },
