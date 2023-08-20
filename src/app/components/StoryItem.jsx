@@ -20,12 +20,13 @@ export default function StoryItem({ story, deleteStory }) {
             transition={{ duration: 0.5, ease: "easeIn" }}
             viewport={{ once: true }}>
             <Image
-                className="w-[500px] md:w-[300px] sm:w-full h-[300px] md:h-[200px] sm:h-auto
-                    rounded-md "
+                className="w-[500px] md:w-[300px] sm:w-full rounded-md
+                h-[300px] md:h-[200px] sm:h-auto hover:scale-105 transition-transform"
                 src={image}
                 alt={slug}
                 width={500}
                 height={300}
+                priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
             />
             <Link href={`/stories/${slug}`}>

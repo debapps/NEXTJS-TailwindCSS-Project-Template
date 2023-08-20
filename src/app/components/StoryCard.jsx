@@ -24,11 +24,13 @@ export default function StoryCard({
             transition={{ duration: 0.5, ease: "easeIn" }}
             viewport={{ once: true }}>
             <Image
-                className="rounded-lg block w-full h-[300px] md:w-full sm:w-full"
+                className="rounded-lg block w-full md:w-full sm:w-full h-auto 
+                hover:scale-105 transition-transform"
                 src={img}
                 alt={title}
                 width={500}
                 height={300}
+                priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
             />
             {/* Blog title */}

@@ -3,6 +3,7 @@ import React from "react";
 import AnimateHeading from "../components/AnimatedHeading";
 import { signIn } from "next-auth/react";
 import GoogleIcon from "@mui/icons-material/Google";
+import MailIcon from "@mui/icons-material/Mail";
 
 export default function Login() {
     return (
@@ -20,11 +21,11 @@ export default function Login() {
                             callbackUrl: "/dashboard",
                         });
                     }}
-                    className="bg-red-600 hover:bg-red-600/80 text-white p-5 w-1/2 sm:w-full text-xl md:text-lg 
-                    sm:text-base font-ubuntu font-bold border-2 border-solid border-dark-color 
-                    rounded-lg">
-                    Login by <GoogleIcon />
-                    oogle
+                    className="bg-red-600 hover:bg-red-600/80 text-white p-5 
+                    w-1/4 sm:w-full text-2xl md:text-lg sm:text-base font-ubuntu font-bold 
+                    border-2 border-solid border-dark-color rounded-lg">
+                    <GoogleIcon />
+                    oogle <MailIcon />
                 </button>
             </section>
         </main>

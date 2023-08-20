@@ -9,7 +9,6 @@ import StoryItem from "../components/StoryItem";
 import { useContext, useState } from "react";
 import StoryForm from "../components/StoryForm";
 import { apiDELETE, apiPOST } from "@/utilities/callAPI";
-import getHTML from "@/utilities/htmlConvert";
 import { AlertContext } from "../context/alert/AlertProvider";
 
 const apiHost = process.env.NEXT_PUBLIC_API_HOST;
@@ -49,9 +48,7 @@ export default function DashBoard() {
         let synopsis = event.target[2].value;
         let image = event.target[3].value;
         let author = session.data?.user.name;
-
-        // Convert the content into HTML text.
-        let content = getHTML(event.target[4].value);
+        let content = event.target[4].value;
 
         const story = {
             title,
@@ -135,7 +132,7 @@ export default function DashBoard() {
                         open ? "block" : "hidden"
                     } w-[90vw] p-4 border border-solid z-15 fixed right-4 top-4
                     bg-light-color border-dark-color dark:border-light-color rounded-lg
-                    animate-slide-left-in min-h-fit shadow-2xl 
+                    animate-slide-left-in h-full overflow-y-scroll shadow-2xl 
                     shadow-pallete-color3 dark:shadow-pallete-color5`}>
                     <StoryForm closeFunc={setOpen} handleSave={handleSave} />
                 </div>

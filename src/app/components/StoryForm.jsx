@@ -1,8 +1,14 @@
-// "use client";
-// import { CKEditor } from "@ckeditor/ckeditor5-react";
-// import InlineEditor from "@ckeditor/ckeditor5-build-inline";
+"use client";
+import JoditEditor from "jodit-react";
+import { useRef, useState } from "react";
 
 export default function StoryForm({ closeFunc, handleSave }) {
+    // The editor content hook.
+    const [content, setContent] = useState("");
+
+    // editor reference.
+    const editor = useRef(null);
+
     return (
         <form
             onSubmit={handleSave}
@@ -49,23 +55,30 @@ export default function StoryForm({ closeFunc, handleSave }) {
                     type="text"
                     placeholder="Image Link"
                 />
-                <textarea
+                {/* <textarea
                     className="w-full p-2 font-sans text-base sm:text-xs font-normal border 
                     border-purple-700 focus:outline-none focus:ring focus:ring-pallete-color1/70
                     bg-transparent rounded"
                     rows={10}
                     cols={20}
-                    placeholder="Content"></textarea>
-                {/* <div className="w-full overflow-y-auto">
-                    <CKEditor
-                        editor={InlineEditor}
-                        data="<p>Enter the story content...</p>"
-                        onChange={(event, editor) => {
-                            const data = editor.getData();
-                            console.log({ event, editor, data });
-                        }}
+                    placeholder="Content"></textarea> */}
+
+                <textarea
+                    className="hidden"
+                    value={content}
+                    onChange={(newContent) => setContent(newContent)}
+                />
+
+                <div className="w-full">
+                    <JoditEditor
+                        ref={editor}
+                        value={content}
+                        placeholder="Content"
+                        tabIndex={1}
+                        onChange={(newContent) => setContent(newContent)}
+                        onBlur={(newContent) => setContent(newContent)}
                     />
-                </div> */}
+                </div>
             </div>
             <button
                 className="w-full p-2 font-ubuntu text-sm sm:text-base text-light-color 

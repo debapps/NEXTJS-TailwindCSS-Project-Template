@@ -4,7 +4,7 @@ import Alert from "@mui/material/Alert";
 import Slide from "@mui/material/Slide";
 
 function SlideTransition(props) {
-    return <Slide {...props} direction="down" />;
+    return <Slide {...props} direction="up" />;
 }
 
 // This is a Alert component. The props is the alert object that has following properties:
