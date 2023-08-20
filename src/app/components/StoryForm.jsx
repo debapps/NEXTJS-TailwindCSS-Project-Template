@@ -1,6 +1,10 @@
 "use client";
-import JoditEditor from "jodit-react";
+
 import { useRef, useState } from "react";
+import dynamic from "next/dynamic";
+
+// Import the JoditEditor using dynamic and server side rendering to false.
+const JoditEditor = dynamic(() => import("jodit-react"), { ssr: false });
 
 export default function StoryForm({ closeFunc, handleSave }) {
     // The editor content hook.
