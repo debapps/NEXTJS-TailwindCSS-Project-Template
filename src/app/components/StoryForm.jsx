@@ -1,3 +1,7 @@
+// "use client";
+// import { CKEditor } from "@ckeditor/ckeditor5-react";
+// import InlineEditor from "@ckeditor/ckeditor5-build-inline";
+
 export default function StoryForm({ closeFunc, handleSave }) {
     return (
         <form
@@ -52,6 +56,16 @@ export default function StoryForm({ closeFunc, handleSave }) {
                     rows={10}
                     cols={20}
                     placeholder="Content"></textarea>
+                {/* <div className="w-full overflow-y-auto">
+                    <CKEditor
+                        editor={InlineEditor}
+                        data="<p>Enter the story content...</p>"
+                        onChange={(event, editor) => {
+                            const data = editor.getData();
+                            console.log({ event, editor, data });
+                        }}
+                    />
+                </div> */}
             </div>
             <button
                 className="w-full p-2 font-ubuntu text-sm sm:text-base text-light-color 
