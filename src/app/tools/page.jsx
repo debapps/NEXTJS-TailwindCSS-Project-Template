@@ -1,5 +1,6 @@
 import ExpandingGallary from "../ToolComponents/ExpandingGallary";
 import AnimateHeading from "../components/AnimatedHeading";
+import DottedHorizontal from "../components/DottedHorizontal";
 import GradientText from "../components/GradientText";
 
 export default function Tools() {
@@ -8,6 +9,9 @@ export default function Tools() {
             className="w-full min-h-screen bg-light-color dark:bg-dark-color 
             px-20 sm:px-10 py-40 sm:py-52 flex flex-col items-center justify-center overflow-x-hidden">
             <AnimateHeading text="Our Featuring Tools." />
+
+            <DottedHorizontal />
+
             <section
                 className="w-full flex flex-col justify-center items-start 
                 py-10 sm:py-5">
@@ -18,6 +22,8 @@ export default function Tools() {
                 </GradientText>
                 <ExpandingGallary />
             </section>
+
+            <DottedHorizontal />
         </main>
     );
 }

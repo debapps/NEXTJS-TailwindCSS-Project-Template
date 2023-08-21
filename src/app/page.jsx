@@ -4,6 +4,7 @@ import HeroImg1 from "../../public/images/web-dev-hero.jpg";
 import HeroImg2 from "../../public/images/api-nextjs.jpg";
 import HeroImg3 from "../../public/images/programming-tools.jpg";
 import GradientText from "./components/GradientText";
+import DottedHorizontal from "./components/DottedHorizontal";
 
 export const metadata = {
     title: "Home | NEXT JS + Tailwind CSS",
@@ -47,10 +48,9 @@ export default function Home() {
                     </p>
                 </article>
             </section>
-            <hr
-                className="w-full h-0 border-t border-dashed border-dark-color 
-              dark:border-light-color border-separate border-spacing-1"
-            />
+
+            <DottedHorizontal />
+
             {/* Section 2 */}
             <section
                 className="w-full flex flex-row md:flex-col sm:flex-col justify-between items-center 
@@ -88,10 +88,9 @@ export default function Home() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
                 />
             </section>
-            <hr
-                className="w-full h-0 border-t border-dashed border-dark-color 
-              dark:border-light-color border-separate border-spacing-1"
-            />
+
+            <DottedHorizontal />
+
             {/* Section 3 */}
             <section
                 className="w-full flex flex-row md:flex-col sm:flex-col justify-between items-center 
@@ -99,7 +98,7 @@ export default function Home() {
                 <Image
                     className="block w-[40%] md:w-full sm:w-full rounded-3xl 
                     shadow-2xl shadow-pallete-color3 dark:shadow-pallete-color5 
-                    animate-zoom-in sm:mt-52 sm:mb-5"
+                    animate-zoom-in sm:my-5"
                     src={HeroImg3}
                     alt="hero-image-3"
                     priority
