@@ -12,6 +12,10 @@ Implemetating the complete front-end features for your NEXT JS + Tailwind CSS pr
 -   Implemetating Dark mode. (using custom hooks)
 -   Other Ready-made Front-end tools.
 
+### Front-end tools.
+
+1. Expanding Image Gallary.
+
 ## Environment Variable
 
 -   **NEXT_PUBLIC_API_URL:** This is the hosting URL for backend API (**Story-API**: "https://story-api-45u7.onrender.com").

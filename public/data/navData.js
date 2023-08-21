@@ -12,6 +12,10 @@ export const navData = [
         href: "/contact",
     },
     {
+        title: "Tools",
+        href: "/tools",
+    },
+    {
         title: "Stories",
         href: "/stories",
     },
