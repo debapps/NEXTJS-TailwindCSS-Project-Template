@@ -67,7 +67,8 @@ export default function ExpandingGallary() {
                         relative shadow-lg shadow-dark-color dark:shadow-pallete-color5 
                         transition-all flex-grow-[0.5]
                         sm:[&:nth-of-type(9)]:hidden sm:[&:nth-of-type(8)]:hidden 
-                        sm:[&:nth-of-type(7)]:hidden sm:[&:nth-of-type(6)]:hidden`}
+                        sm:[&:nth-of-type(7)]:hidden sm:[&:nth-of-type(6)]:hidden
+                        sm:[&:nth-of-type(5)]:hidden sm:[&:nth-of-type(4)]:hidden`}
                         style={{
                             backgroundImage: `url('${item.imgURL}')`,
                             backgroundSize: "cover",
@@ -75,8 +76,9 @@ export default function ExpandingGallary() {
                             backgroundRepeat: "no-repeat",
                         }}>
                         <p
-                            className="text-white bg-dark-color/60 p-1 absolute bottom-5 left-5 
-                            m-0 opacity-0 transition-opacity">
+                            className="text-white bg-dark-color/60 p-[0.5   ]  
+                            m-0 opacity-0 transition-opacity max-w-fit
+                            absolute bottom-5 left-5 md:text-sm sm:text-[8px]">
                             {item.text}
                         </p>
                     </div>
