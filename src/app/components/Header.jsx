@@ -23,7 +23,7 @@ export default function Header() {
 
         if (y > window.scrollY) {
             setScrollUP(true);
-        } else if (y <= window.scrollY) {
+        } else if (y < window.scrollY) {
             setScrollUP(false);
         }
 
