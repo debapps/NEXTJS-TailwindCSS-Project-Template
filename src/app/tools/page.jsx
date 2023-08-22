@@ -19,7 +19,7 @@ export default function Tools() {
                 <GradientText
                     sx="text-6xl md:text-4xl sm:text-2xl font-bold font-ubuntu
                     leading-tight animate-text-in">
-                    Blurry Loading (Hover to see effect)
+                    Blurry Loading (Click to see the effect again)
                 </GradientText>
                 <BlurryLoading />
             </section>
