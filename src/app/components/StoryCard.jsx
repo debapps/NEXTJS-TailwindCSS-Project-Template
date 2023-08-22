@@ -5,6 +5,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import GradientText from "./GradientText";
 
+const MotionLink = motion(Link);
+
 export default function StoryCard({
     title,
     slug,
@@ -15,7 +17,8 @@ export default function StoryCard({
     date,
 }) {
     return (
-        <motion.section
+        <MotionLink
+            href={`/stories/${slug}`}
             className="flex flex-col justify-start items-start w-[500px] md:w-[90vw] sm:w-[90vw] 
             min-h-[700px] m-7 md:m-7 sm:m-7 border-2 border-solid border-dark-color rounded-lg p-5
             shadow-xl shadow-dark-color dark:shadow-pallete-color5"
@@ -52,14 +55,6 @@ export default function StoryCard({
             </div>
             {/* Blog synopsis */}
             <p className="sm:text-base text-lg font-karla py-5">{synopsis}</p>
-            {/* Detailed blog link */}
-            <Link
-                className="sm:text-base text-lg font-ubuntu p-2 my-3 bg-pallete-color4
-                hover:bg-pallete-color1 text-pallete-color5 border rounded-lg shadow-lg 
-                shadow-pallete-color2"
-                href={`/stories/${slug}`}>
-                Read More ..
-            </Link>
-        </motion.section>
+        </MotionLink>
     );
 }
