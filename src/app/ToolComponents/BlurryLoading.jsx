@@ -25,8 +25,6 @@ export default function BlurryLoading() {
         const bg = blurryImg.current;
         const loadText = blurryImg.current.children[0];
 
-        console.log(bg, loadText);
-
         // Initialize the load value.
         let load = 0;
 

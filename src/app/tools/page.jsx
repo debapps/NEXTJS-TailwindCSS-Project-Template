@@ -1,4 +1,5 @@
 import BlurryLoading from "../ToolComponents/BlurryLoading";
+import Clock from "../ToolComponents/Clock";
 import ExpandingGallary from "../ToolComponents/ExpandingGallary";
 import AnimateHeading from "../components/AnimatedHeading";
 import DottedHorizontal from "../components/DottedHorizontal";
@@ -35,6 +36,19 @@ export default function Tools() {
                     Expanding Image Gallary
                 </GradientText>
                 <ExpandingGallary />
+            </section>
+
+            <DottedHorizontal />
+
+            <section
+                className="w-full flex flex-col justify-center items-center 
+                py-10 sm:py-5">
+                <GradientText
+                    sx="text-6xl md:text-4xl sm:text-2xl font-bold font-ubuntu
+                    leading-tight animate-text-in">
+                    The Clock
+                </GradientText>
+                <Clock />
             </section>
 
             <DottedHorizontal />

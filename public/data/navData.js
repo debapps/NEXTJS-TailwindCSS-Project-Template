@@ -4,14 +4,6 @@ export const navData = [
         href: "/",
     },
     {
-        title: "About",
-        href: "/about",
-    },
-    {
-        title: "Contact",
-        href: "/contact",
-    },
-    {
         title: "Tools",
         href: "/tools",
     },
@@ -22,5 +14,13 @@ export const navData = [
     {
         title: "Dashboard",
         href: "/dashboard",
+    },
+    {
+        title: "About",
+        href: "/about",
+    },
+    {
+        title: "Contact",
+        href: "/contact",
     },
 ];
